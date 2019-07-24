@@ -154,7 +154,59 @@ class Find extends Component{
                         '阿德莱德',
                         '乌鲁鲁',
                         '珀斯',
-                        
+                    ]
+                },
+                {
+                    title:'新西兰',
+                    childcate:[
+                        '新西兰南岛',
+                        '新西兰北岛 ',
+                        '皇后镇',
+                        '福克斯冰川',
+                        '基督城',
+                        '奥克兰',
+                        '惠灵顿',
+                        '爱歌顿农庄',
+                        '蒂阿瑙',
+                    ]
+                },
+                {
+                    title:'亚洲',
+                    childcate:[
+                        '泰国',
+                        '普吉岛 ',
+                        '日本',
+                        '中国',
+                        '韩国'
+                    ]
+                },
+                {
+                    title:'邮轮',
+                    childcate:[
+                        '邮轮攻略',
+                        '邮轮旅游资讯 ',
+                    ]
+                },
+                {
+                    title:'其他',
+                    childcate:[
+                        '结伴同游',
+                        '旅游签证 ',
+                        '途风小编原创',
+                        '旅游小文章 ',
+                        '旅游胜地盘点',
+                        '途风独创旅游',
+                        '巴拿马',
+                        '伯利兹',
+                        '俄罗斯 ',
+                        '厄瓜多尔',
+                        '哥伦比亚 ',
+                        '哥斯达黎加',
+                        '秘鲁',
+                        '摩洛哥 ',
+                        '萨尔瓦多',
+                        '智利',
+                        '古巴',
                     ]
                 },
             ]
@@ -165,9 +217,9 @@ class Find extends Component{
     render(){
         let {catelist} = this.state;
         return (<div>
-            <h4 style={{textAlign:'center',fontWeight:'700',fontSize:'0.3rem',boxShadow: '0 1px 2px rgba(88,88,88,.1)',lineHeight:'0.8rem',marginBottom:'0'}}>发现</h4>
+            <h4 style={{marginBottom:'0.02rem',textAlign:'center',fontWeight:'700',fontSize:'0.3rem',boxShadow: '0 1px 2px rgba(88,88,88,.1)',lineHeight:'0.8rem'}}>发现</h4>
 
-            <Tabs defaultActiveKey="1" tabPosition="left" style={{height:'100%'}}>
+            <Tabs defaultActiveKey="美国东海岸" tabPosition="left" style={{height:'100%'}}>
                 {
                     catelist.map((item,idx)=>(
                         <TabPane tab={item.title} key={item.title}>
@@ -175,17 +227,11 @@ class Find extends Component{
                                 item.childcate.map(ele=>(
                                     <span key={ele}>{ele}</span>
                                 ))
-                            }
-                            
+                            }                        
                         </TabPane>
                     ))
-                }
-                
+                }               
             </Tabs>
-
-
-
-
         </div>)
     }
 }
