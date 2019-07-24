@@ -1,0 +1,15 @@
+.ant-tabs-content.ant-tabs-content-animated.ant-tabs-left-content{
+    padding:0.1rem 0.3rem 0.3rem 0.3rem;
+    span{
+        width:45%;
+        display:inline-block;
+        background:#ccc;
+        text-align: center;
+        line-height: 0.56rem;
+        margin-bottom: 0.3rem;
+        color:#242424;
+    }
+    span:nth-child(2n){
+        margin-right:0.3rem;
+    }
+}

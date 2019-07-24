@@ -1,0 +1,65 @@
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 4.7rem;
+    line-height: 4.7rem;
+    background: #364d79;
+    overflow: hidden;
+    
+  }
+  .ant-carousel .slick-dots li button{
+      height:0.1rem;
+      width:0.1rem !important;
+      border-radius:50%;
+      background: #000;
+  }
+  .ant-input-affix-wrapper .ant-input {
+      border-radius: 0.6rem !important;
+      padding:0 0.5rem !important;
+      height:0.6rem;
+    }
+    .ant-carousel .slick-slide {
+        background:none;
+    }
+    .imgs{
+        width: 72px;
+        height: 72px;
+        margin: 0 auto;
+        background-image: url('./img/home.png');
+        background-size: 320px 184px;
+        background-repeat: no-repeat;
+    }
+    .hotDestination .ant-card-body{
+        position: absolute;
+        bottom:0;
+        width:100%;
+        height:0.5rem;
+        background: rgba(0,0,0,.4);
+        padding:0.15rem;
+    }
+    .hotDestination .ant-card-meta-title{
+        color:#fff;
+    }
+    .newlist .ant-card-body{
+        padding:0.12rem;
+    }
+    .newlist .ant-card-meta-title {
+        overflow: hidden;
+        color: rgba(0, 0, 0, 0.85);
+        font-weight: 500;
+        font-size: 0.22rem;
+        white-space:normal;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .newlist .ant-card-meta-description{
+        color:#fb5f10;
+        font-size: 0.4rem;
+        line-height: 0.5rem;
+    }
+    .newlist .ant-card-meta-description::after{
+        content:'起';
+        color:#000;
+        font-size: 0.3rem;
+    }
