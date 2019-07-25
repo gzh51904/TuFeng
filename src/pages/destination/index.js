@@ -175,7 +175,7 @@ class Destination extends Component{
         <div>
         {/* {header} */}
             <div className="headerBox">
-                <img src={this.state.mainImg} alt="黄石"/>
+                <img src={this.state.mainImg} alt="黄石" style={{width:'100%'}}/>
                 <div className="headcontainer">
                     <Icon type="search" style={{fontSize:'0.5rem',color:'#fff',margin:'0.16rem 0 0 0.1rem'}} />
                     <div className="city-container">
