@@ -8,7 +8,7 @@ import Mine from './pages/mine'
 import Goods from './pages/goods';
 import Destination from './pages/destination';
 import './App.css'
-
+import store from './store/index';
 import {  Menu, Icon  } from 'antd';
 
 import {connect} from 'react-redux'
@@ -74,6 +74,8 @@ class App extends Component{
   }
   render(){
     let {navs} = this.state;
+    let {show} = this.props
+    console.log(show);
       return (
         <div className="App">  
 
@@ -89,7 +91,7 @@ class App extends Component{
             </Switch>
 
             {/* 菜单 */}
-            <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal" className="menu">
+            <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal" className="menu" style={{display:show}}>
             {
               navs.map(item=>(
                 <Menu.Item key={item.path}>
@@ -110,7 +112,7 @@ App = withRouter(App)
 
 App = connect((state)=>{
   return {
-    goodslen:state.goodslist.length
+    show:state.show
   }
 })(App)
 

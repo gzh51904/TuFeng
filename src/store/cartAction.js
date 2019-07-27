@@ -1,6 +1,8 @@
 export const  ADD_TO_CART = 'ADD_TO_CART'
 export const  REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 export const  CHANGE_GOODS_QTY = 'CHANGE_GOODS_QTY'
+export const  CHANGE_SHOW = 'CHANGE_SHOW'
+
 
 export function addAction(goods){
     return {
@@ -23,8 +25,16 @@ export function changeQtyAction({id,qty}){
     }
 }
 
+export function chanegeshow(bool){
+    return {
+        type:CHANGE_SHOW,
+        payload:bool
+    }
+}
+
 export default {
     addAction,
     removeAction,
-    changeQtyAction
+    changeQtyAction,
+    chanegeshow
 }

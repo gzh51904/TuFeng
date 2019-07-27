@@ -75,25 +75,29 @@ class Destination extends Component{
             ],
             juan1Img:require("./img/juan1.jpg"),
             gtlist:[
-                {
+                {   
+                    id:"3",
                     img:require("./img/gt1.jpg"),
                     content:'【美国国家旅游局推荐】(7天)浪漫观景火车·海岸星光号:西雅图+旧金山·海岸星光号观景火车+伯尼瀑布+日晷桥+红木森林火车+西峡/南峡/羚羊峡谷+旧金山市区游',
                     price:'$468',
                     ori:'default'
                 },
-                {
+                {   
+                    id:"4",
                     img:require("./img/gt2.jpg"),
                     content:'<2天>【美国人文历史短途游】国会山庄深度步行游、费城双层观光巴士游览、乘首都游船饱览首都地标建筑、探索美国大学三巨头之一普林斯顿',
                     price:'$46',
                     ori:'原价:$53'
                 },
-                {
+                {   
+                    id:"5",
                     img:require("./img/gt3.jpg"),
                     content:'<7天>【玩转美元】纸币上的建筑游：独立宫+免费入内国会大厦+白宫+美国财政部+林肯纪念堂；纽约波士顿经典双城市区游；入住瀑布景区内酒店，纵览尼亚加拉大瀑布日夜景观，可代购美国境内往返优惠机票',
                     price:'¥246',
                     ori:'原价:$327'
                 },
-                {
+                {   
+                    id:"6",                    
                     img:require("./img/gt4.jpg"),
                     content:'<6天>【美国国家旅游局推荐】美中东音乐主题人文之旅：美中东部7大历史名城+观赏尼亚加拉大瀑布+原味阿米希人村落+蓝调之都芝加哥+古典音乐费城+世界摇滚之都克利夫兰朝圣',
                     price:'$436',
@@ -101,25 +105,29 @@ class Destination extends Component{
                 },
             ],
             wllist:[
-                {
+                {   
+                    id:"7",
                     img:require("./img/wl1.jpg"),
                     content:'【电子票】美国自然历史博物馆(American Museum of Natural History)',
                     price:'$13',
                     ori:'default'
                 },
-                {
+                {   
+                    id:"8",
                     img:require("./img/wl2.jpg"),
                     content:'【西峡】美国大峡谷巴士一日游(酒店接送+西峡门票+胡佛水坝+直升机+游船+午餐)',
                     price:'$299',
                     ori:'default'
                 },
                 {
+                    id:"9",
                     img:require("./img/wl3.jpg"),
                     content:'【西峡】美国大峡谷飞机一日游(酒店接送+西峡门票+胡佛水坝+直升机+午餐)',
                     price:'¥208',
                     ori:'default'
                 },
-                {
+                {   
+                    id:"10",
                     img:require("./img/wl4.jpg"),
                     content:'【途风高端-私享"豪"体验】洛杉矶空中飞行驾驶体验：美国联邦航空局授权, 专业教官1:1私家教授(可升级获取GoPro全程影像与飞行照片)',
                     price:'$148',
@@ -169,8 +177,24 @@ class Destination extends Component{
         },false);
     }
 
+    goto(id,img,content,price,ori){
+        let {history} = this.props;
+
+        let pathname = '/goods/'+id;console.log('id',id,pathname)
+
+        history.push({
+            pathname,
+            query:{
+                img,
+                content,
+                price,
+                ori
+            }
+        })
+    }
+
     render(){
-        let {navlist,hotcate,bqlist,gtlist} = this.state;
+        let {navlist,hotcate,bqlist,gtlist,wllist} = this.state;
         return(
         <div>
         {/* {header} */}
@@ -258,6 +282,10 @@ class Destination extends Component{
                                 style={{ width:'48%',marginBottom:'0.3rem',boxShadow:'0 2px 10px #e8e0e0'}}
                                 cover={<img src={item.img} alt={item.img} style={{height:'1.7rem'}}/>}
                                 key={item.img}
+                                onClick={this.goto.bind(this,item.id,item.img,
+                                    item.content,
+                                    item.price,
+                                    item.ori)}
                             >
                                 <Meta title={item.content} description={
                                     <div>
@@ -275,12 +303,16 @@ class Destination extends Component{
                <h3 style={{margin:'0.4rem 0 0.25rem',fontSize:'0.27rem',color:'#363636',fontWeight: 'bolder'}}>当地玩乐销量榜</h3>
                 <div style={{display:'flex',justifyContent:'space-between',flexWrap:'wrap'}} className="gtlist">
                     {
-                        gtlist.map(item=>(
+                        wllist.map(item=>(
                              <Card
                                 hoverable
                                 style={{ width:'48%',marginBottom:'0.3rem',boxShadow:'0 2px 10px #e8e0e0'}}
                                 cover={<img src={item.img} alt={item.img} style={{height:'1.7rem'}}/>}
                                 key={item.img}
+                                onClick={this.goto.bind(this,item.id,item.img,
+                                    item.content,
+                                    item.price,
+                                    item.ori)}
                             >
                                 <Meta title={item.content} description={
                                     <div>

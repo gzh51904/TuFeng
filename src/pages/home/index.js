@@ -89,12 +89,14 @@ class Home extends Component{
             ],
 
             newList:[
-                {
+                {   
+                    id:"1",
                     img:require("./img/new1.jpg"),
                     content:'<3天>【埃塞俄比亚 拉利贝拉岩石教堂震撼之旅】堪称非洲奇迹的宏伟建筑+世界文化遗产+始建于公元12世纪的原始窑洞教堂',
                     price:'¥3517'
                 },
                 {
+                    id:"2",
                     img:require("./img/new2.jpg"),
                     content:'【14人小团】红遍朋友圈，纽约网红一日游：天天发团！好莱坞大片拍摄地中央车站+纽约公共图书馆+缆车/轮渡全方位欣赏曼哈顿+超火网红打卡景点Dumbo艺术区+切尔西市场',
                     price:'¥931'
@@ -103,7 +105,22 @@ class Home extends Component{
         }
 
     }
+    
+    goto(id,img,content,price,ori){
+        let {history} = this.props;
 
+        let pathname = '/goods/'+id;console.log('id',id,pathname)
+
+        history.push({
+            pathname,
+            query:{
+                img,
+                content,
+                price,
+                ori
+            }
+        })
+    }
     render(){
         let {navlist,hotDestination,newList} = this.state;
         return (
@@ -168,11 +185,15 @@ class Home extends Component{
                 <div style={{display:'flex',padding:'0 0.3rem',justifyContent:'space-between'}} className="newlist">
                     {
                         newList.map(item=>(
-                             <Card
+                             <Card 
                                 hoverable
                                 style={{ width:'45%'}}
                                 cover={<img src={item.img} alt={item.img} style={{height:'2.3rem'}}/>}
                                 key={item.img}
+                                onClick={this.goto.bind(this,item.id,item.img,
+                                    item.content,
+                                    item.price,
+                                    item.ori)}
                             >
                                 <Meta title={item.content} description={item.price}/>
                             </Card>

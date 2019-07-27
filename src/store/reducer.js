@@ -1,7 +1,8 @@
-import {ADD_TO_CART,REMOVE_FROM_CART,CHANGE_GOODS_QTY} from './cartAction';
+import {ADD_TO_CART,REMOVE_FROM_CART,CHANGE_GOODS_QTY,CHANGE_SHOW} from './cartAction';
 
 let initState = {
-    goodslist:[]
+    goodslist:[],
+    show:"block"
 }
 
 let reducer = (state=initState,action)=>{
@@ -26,6 +27,11 @@ let reducer = (state=initState,action)=>{
             return {
                 ...state,
                 goodslist
+            }
+        case CHANGE_SHOW:
+        return {
+            ...state,
+            show : action.payload
             }
         default:
             return state;
