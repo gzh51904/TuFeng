@@ -6,12 +6,15 @@ import Find from './pages/find'
 import Cart from './pages/cart'
 import Mine from './pages/mine'
 import Goods from './pages/goods';
+import Customer from './pages/customer';
+import Reg from './pages/reg'
 import Destination from './pages/destination';
 import './App.css'
 
 import {  Menu, Icon  } from 'antd';
 
 import {connect} from 'react-redux'
+import Login from './pages/login';
 
 class App extends Component{
   constructor(){
@@ -84,6 +87,9 @@ class App extends Component{
               <Route path="/find" component={Find}></Route>
               <Route path="/cart" component={Cart}></Route>
               <Route path="/mine" component={Mine}></Route>
+              <Route path="/customer" component={Customer}></Route>
+              <Route path="/login" component={Login}></Route>
+              <Route path="/reg" component={Reg}></Route>
               <Route path="/goods/:id" component={Goods}></Route>
               <Redirect from="/" to="/home" exact />
             </Switch>

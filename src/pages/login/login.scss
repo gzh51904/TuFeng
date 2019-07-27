@@ -1,0 +1,348 @@
+.msg-tip {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: .96rem;
+    padding: .24rem .48rem;
+    color: #fb5f10;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 0.02rem 0.08rem rgba(120,120,120,0.2);
+    z-index: 3;
+}
+.msg-tip i {
+    font-size: .48rem;
+    position: absolute;
+    left: .48rem;
+}
+.msg-tip .msg-content {
+    margin: 0 .96rem;
+}
+.sign-bar {
+    height: .96rem;
+    line-height: .96rem;
+    box-shadow: 0 0.02rem 0.05rem rgba(120,120,120,0.2);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: .36rem;
+}
+.sign-bar .bar-item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.sign-bar .bar-left i {
+    color: #0090f2;
+    font-size: .36rem;
+    margin-left: .48rem;
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sign-bar .bar-center {
+    text-align: center;
+}
+.signin-tab {
+    display: flex;
+    height: 1.28rem;
+    line-height: 1.28rem;
+    padding: 0 .48rem;
+}
+.signin-tab .tab-item.active {
+    color: #0090f2;
+    border-bottom: .04rem solid #0090f2;
+}
+.signin-tab .tab-item {
+    width: 2rem;
+    height: 1.28rem;
+    text-align: center; 
+}
+.sign-form .form-item .form-item-icon {
+    display: block;
+    height: .48rem;
+    line-height: .48rem;
+    width: .48rem;
+    min-width: .48rem;
+    text-align: center;
+    font-size: .48rem;
+    color: #b6b6b6;
+    overflow: hidden;
+}
+.sign-form .form-item input {
+ 
+    display: block;
+    width: 2rem;
+    height: 0.6rem;
+    flex: 1;
+    border: 2px solid #fff;
+}
+.sign-form .form-item .form-item-icon.icon-sign-clear {
+    color: #363636;
+}
+.sign-form .form-item .form-item-icon {
+    display: block;
+    height: .48rem;
+    line-height: .48rem;
+    width: .48rem;
+    min-width: .48rem;
+    text-align: center;
+    font-size: .48rem;
+    color: #b6b6b6;
+    overflow: hidden;
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.sign-submit-btn {
+    margin: .48rem 0;
+}
+.sign-submit-btn button {
+    color: #FFF;
+}
+.btn-default {
+    width: 100%;
+    min-height: .8rem;
+    border-radius: .08rem;
+    box-shadow: none;
+    border: none;
+    padding: 0 .24rem;
+    font-size: .28rem;
+    outline: none;
+    height: .96rem;
+    font-size: .36rem;
+    background: #d6d6d6;
+    color: #ffffff;
+}
+.btn-active{
+    width: 100%;
+    min-height: .8rem;
+    border-radius: .08rem;
+    box-shadow: none;
+    border: none;
+    padding: 0 .24rem;
+    font-size: .28rem;
+    outline: none;
+    height: .96rem;
+    font-size: .36rem;
+    background: red;
+    color: #ffffff;
+}
+.btn {
+    width: 100%;
+    min-height: .8rem;
+    border-radius: .08rem;
+    box-shadow: none;
+    border: none;
+    padding: 0 .24rem;
+    font-size: .28rem;
+    outline: none;
+}
+.signin-other-option {
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: .16rem;
+}
+.signin-other-option a {
+    display: block;
+    color: #363636;
+    text-decoration: none;
+    outline: none;
+    font-size: .24rem;
+}
+.signin-other-option a {
+    display: block;
+    color: #363636;
+    text-decoration: none;
+    outline: none;
+    font-size: .24rem;
+}
+.sign-form .phone-code {
+    line-height: .6rem;
+}
+.sign-form .form-item {
+    height: 1.28rem;
+    position: relative;
+    padding: .24rem 0;
+    border-bottom: .01rem solid #d6d6d6;
+    display: flex;
+    align-items: center;
+}
+.sign-form .phone-code {
+    line-height: .6rem;
+}
+.sign-form .phone-code .code {
+    margin-left: .48rem;
+    color: #0090f2;
+}
+.sign-form .phone-code .icon-sign-code {
+    font-size: .2rem;
+    height: .2rem;
+    width: .2rem;
+    color: #0090f2;
+}
+.sign-form .form-item {
+    height: 1.28rem;
+    position: relative;
+    padding: .24rem 0;
+    border-bottom: .01rem solid #d6d6d6;
+    display: flex;
+    align-items: center;
+}
+.sign-form .form-item .form-item-icon {
+    display: block;
+    height: .48rem;
+    line-height: .48rem;
+    width: .48rem;
+    min-width: .48rem;
+    text-align: center;
+    font-size: .48rem;
+    color: #b6b6b6;
+    overflow: hidden;
+}          
+
+.sign-form .form-item .form-item-icon.icon-sign-clear {
+    color: #363636;
+}
+.sign-form .form-item .form-item-icon {
+    display: block;
+    height: .48rem;
+    line-height: .48rem;
+    width: .48rem;
+    min-width: .48rem;
+    text-align: center;
+    font-size: .48rem;
+    color: #b6b6b6;
+    overflow: hidden;
+}
+.sign-form .form-item .varify_input {
+    margin-right: 2.8rem;
+}
+.sign-form .form-item .varify_btn {
+    position: absolute;
+    right: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.sign-form .form-item .form-item-icon.icon-sign-clear {
+    color: #363636;
+}
+.sign-form .form-item .form-item-icon {
+    display: block;
+    height: .48rem;
+    line-height: .48rem;
+    width: .48rem;
+    min-width: .48rem;
+    text-align: center;
+    font-size: .48rem;
+    color: #b6b6b6;
+    overflow: hidden;
+}
+.sign-form .form-item .btn {
+    width: auto;
+    display: block;
+}
+.btn-default {
+    background: #d6d6d6;
+    color: #ffffff;
+}
+.btn {
+    width: 100%;
+    min-height: .8rem;
+    border-radius: .08rem;
+    box-shadow: none;
+    border: none;
+    padding: 0 .24rem;
+    font-size: .28rem;
+    outline: none;
+}
+.no-wrap {
+    white-space: nowrap;
+}
+.sign-submit-btn button {
+    color: #FFF;
+}
+.btn-lg {
+    height: .96rem;
+    font-size: .36rem;
+}
+.btn-default {
+    background: #d6d6d6;
+    color: #ffffff;
+}
+.other-sign {
+    margin: 1.28rem 0;
+    width: 100%;
+    background: #ffffff;
+}
+.main {
+    margin: 0 .48rem;
+}
+.other-sign fieldset {
+    border: 0 none;
+    border-top: 1px solid #DCDCDC;
+    height: .24rem;
+}
+.other-sign legend {
+    font-size: .24rem;
+    color: #767676;
+    text-align: center;
+    padding: 0 10px;
+}
+.other-sign .other-sign-list {
+    margin-top: .48rem;
+    
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.other-sign .other-sign-list a {
+    display: block;
+    height: 1.12rem;
+    width: 1.12rem;
+    margin-right: .48rem;
+    text-align: center;
+    background-image: url(https://account.toursforfun.com/assets/imgs/sign/m_other_sign.png);
+    background-repeat: no-repeat;
+    background-size: 3.38rem 1.12rem;
+}
+.other-sign .other-sign-list a.sign-weibo {
+    background-position: -1.12rem 0;
+}
+.other-sign .other-sign-list a:last-child {
+    margin-right: 0;
+}
+.other-sign .other-sign-list a {
+    display: block;
+    height: 1.12rem;
+    width: 1.12rem;
+    margin-right: .48rem;
+    text-align: center;
+    background-image: url(https://account.toursforfun.com/assets/imgs/sign/m_other_sign.png);
+    background-repeat: no-repeat;
+    background-size: 3.38rem 1.12rem;
+}

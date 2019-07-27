@@ -1,0 +1,36 @@
+ .no-login img {
+    display: block;
+    width: 3rem;
+    margin: 0.6rem auto;
+}
+.no-login p {
+    text-align: center;
+    margin-bottom: 0.9rem;
+   color:black;
+   font-size: 0.25rem;
+   text-align: center; 
+
+}
+.no-login .goto-login {
+   
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: #fff;
+    width: 76%;
+    height: 0.8rem;
+}
+.no-login span {
+    margin: 30px auto;
+    width: 76%;
+    border-radius: 21px;
+    border: 1px solid #E0E0E0;
+}
+.no-login span, .order-list .no-order span {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    color: #363636;
+    text-align: center;
+}
