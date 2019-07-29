@@ -1,0 +1,6 @@
+{
+    "PORT":1995,
+    "mongourl":"mongodb://localhost:27017",
+    "dbname":"mongo01",
+    "pKey":"dingding"
+}

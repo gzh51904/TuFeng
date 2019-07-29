@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './login.scss'
+import {api} from '../../utils'
 import { Icon} from 'antd';
 import {NavLink,Route,Switch,Redirect} from 'react-router-dom';
 class Login extends Component{
@@ -45,8 +46,26 @@ class Login extends Component{
               }
           })
       }
-      goto(){
-          console.log(1111)
+      login(){
+        let {user ,pwd} =this.state;
+        // console.log(user,pwd);
+        api.get('/login',{
+            params:{
+                username:user,
+                pwd:pwd
+            }
+        }).then((res)=>{
+            let {data ,headers} = res;
+            if(data.code == 250){
+                alert('用户名或密码错误！')
+            }else if(data.code ===1000){
+                localStorage.setItem('Authorization',data.data);
+                alert('cg')
+               
+            }
+        })
+       
+
       }
       render(){
         let {url,path} = this.props.match;
@@ -88,7 +107,7 @@ class Login extends Component{
                                              <div className="sign-submit-btn">
                                                  <button disabled={this.state.have?'':"xxx"} 
                                                  id="loginbtn" className={this.state.have?'btn-active':'btn-default'} 
-                                                 onClick={this.goto.bind(this)} >登录</button>
+                                                 onClick={this.login.bind(this)} >登录</button>
                                                 </div> 
                                                  <div className="signin-other-option">
                                                     <a href="/signUp">注册账号</a> 

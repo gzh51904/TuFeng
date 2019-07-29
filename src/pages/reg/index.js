@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './reg.scss'
 import {Icon} from 'antd'
+import{api} from '../../utils'
+
 import {NavLink,Route,Switch,Redirect} from 'react-router-dom';
 class Reg extends Component{
     constructor(){
@@ -26,6 +28,17 @@ class Reg extends Component{
             this.state.reghave = true
         }
     })
+   }
+   reg(){
+       console.log(111)
+       let {phone ,pwd} = this.state;
+       api.post('/reg',{
+           username:phone,
+           pwd:pwd
+        
+       }).then((res)=>{
+           console.log(res)
+       })
    }
     render(){
         return(
@@ -71,10 +84,7 @@ class Reg extends Component{
                         </i>
                     </div> 
                     <div className="sign-submit-btn">
-                        <button disabled="disabled" className={this.state.reghave?'btn-active':'btn-default'} 
-                        
-                        
-                        >注册</button>
+                        <button disabled={this.state.reghave?'':'123'} className={this.state.reghave?'btn-active':'btn-default'} onClick = {this.reg.bind(this)}>注册</button>
                     </div>
                 </div> 
                
